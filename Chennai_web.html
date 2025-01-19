@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Chennai</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f4f7; /* Light neutral background */
+        }
+
+        header {
+            background: #e74c3c; /* Vibrant red for header */
+            color: white;
+            text-align: center;
+            padding: 40px;
+            font-size: 36px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+            background: white;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333; /* Dark gray for headings */
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555; /* Soft gray for text */
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: #222; /* Dark footer */
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 16px;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #ffcc00; /* Gold for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            background: #3498db; /* Bright blue for buttons */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #2980b9; /* Darker blue on hover */
+        }
+
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .popup button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #c0392b;
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Discover the Wonders of Chennai
+    </header>
+    
+    <section class="section">
+        <img src="C:\Users\vishw\Downloads\15101676432_a215b8ebf8_b--english pro.jpg" alt="Marina Beach" class="image">
+        <div class="content">
+            <h2>Welcome to Chennai</h2>
+            <p>Immerse yourself in Chennai’s rich culture, stunning beaches, and world-class cuisine.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <img src="C:\Users\vishw\Downloads\photo-collage.png.png" alt="Religious Harmony" class="image">
+        <div class="content">
+            <h2>Religious Harmony</h2>
+            <p>Experience Chennai's spiritual diversity through iconic places like Kapaleeshwarar Temple, San Thome Basilica, and Thousand Lights Mosque.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <img src="C:\Users\vishw\Downloads\Untitled-design-56--engpro.png" alt="South Indian Cuisine" class="image">
+        <div class="content">
+            <h2>Flavors of Chennai</h2>
+            <p>Relish traditional delicacies like dosa, idli, biryani, and authentic filter coffee.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <img src="C:\Users\vishw\Downloads\eng-project.jpeg" alt="Pongal Festival" class="image">
+        <div class="content">
+            <h2>Pongal Festival</h2>
+            <p>Celebrate Tamil Nadu’s grand harvest festival with vibrant traditions, special foods, and festive joy.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <img src="C:\Users\vishw\Downloads\photo-collage.png (1).png" alt="Shopping & Markets" class="image">
+        <div class="content">
+            <h2>Shopping & Local Markets</h2>
+            <p>Discover T. Nagar and Pondy Bazaar for exquisite silk sarees, jewelry, and traditional handicrafts.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="content">
+            <h2>Explore More</h2>
+            <p>Chennai has much more to offer, from its architectural marvels to its vibrant arts scene. There's always something to discover!</p>
+            <a href="file:///C:/Users/vishw/OneDrive/Desktop/Chennai_web/creator_web.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Discover Chennai. All Rights Reserved  by vishwa :).</p>
+    </footer>
+
+    <!-- Popup and Overlay -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popup">
+        <h3>This website was made by Vishwa</h3>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        // Function to open the popup
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popupOverlay').style.display = 'block';
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+
+        // Open the popup when the page loads
+        window.onload = function() {
+            openPopup();
+        }
+    </script>
+</body>
+</html>
